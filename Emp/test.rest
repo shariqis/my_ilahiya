@@ -1,0 +1,9 @@
+GET http://127.0.0.1:8000/emp/books/
+Content-Type: application/json
+
+{
+"title":"muybook",
+"author":"kollam",
+"published_date":2012-11-23
+
+}

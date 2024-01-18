@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>EDIT PROFILE</h1>
+
+    <form action="" method="post">
+       
+        {% csrf_token %}
+                First Name<input type="text" name="fname" value="{{ details1.user_id.first_name }}" > <br>
+                Last Name<input type="text" name="lname" value="{{ details1.user_id.last_name }}" > <br>
+                Email <input type="email" name="email" value="{{ details1.user_id.email }}"> <br>
+                Username<input type="text" name="uname" value="{{ details1.user_id.username }}"> <br>
+                Phone<input type="number" name="ph" value="{{ details1.user_id.phone }}"> <br>
+                Department<input type="text" name="dpt" value="{{ details1.department }}" > <br>
+                Plus Two mark<input type="text" name="pm" value="{{ details1.plus_mark }}" > <br>
+              
+                <input type="submit" value="UPDATE">
+
+
+
+
+
+
+
+               
+            </form>
+
+
+
+            <hr>
+
+
+
+
+            <table border="1px">
+                <tr>
+                    <th>Fname</th>
+                    <th>Lname</th>                   
+                    <th>DEpartment</th>
+                    <th>PLUMARK</th>
+                </tr>
+        
+                {% for stu in details2 %}
+                <tr>
+                    <td>{{ stu.user_id.first_name }}</td>
+                    <td>{{ stu.user_id.last_name }}</td>                   
+                    <td>{{ stu.department }}</td>
+                    <td>{{ stu.plus_mark }}</td>
+                   
+        
+                </tr>
+                {% endfor %}
+            </table>
+
+
+    
+</body>
+</html>

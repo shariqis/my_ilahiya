@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>MY STUDENT DETAILS</h1>
+
+    
+
+    <table border="1px">
+        <tr>
+            <th>Fname</th>
+            <th>Lname</th>
+            <th>age</th>
+            <th>phone</th>
+            <th>email</th>
+        </tr>
+
+        {% for stu in data %}
+        <tr>
+            <td>{{ stu.first_name }}</td>
+            <td>{{ stu.last_name }}</td>
+            <td>{{ stu.age }}</td>
+            <td>{{ stu.phone }}</td>
+            <td>{{ stu.email }}</td>
+            <td> <a href="/de/{{ stu.id }}/">DELETE</a> </td>
+            <td> <a href="/edit/{{ stu.id }}/">EDIT</a> </td>
+
+        </tr>
+        {% endfor %}
+    </table>
+    
+</body>
+</html>

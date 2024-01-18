@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>EMPLOYEE LIST</h1>
+
+    <table border="1">
+        <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Email</th>
+        <th>Phone</th>
+        </tr>
+
+
+        {% for e in oo %}
+        <tr>
+            <td>{{ e.first_name }}</td>
+            <td>{{ e.last_name }}</td>
+            <td>{{ e.email }}</td>
+            <td>{{ e.phone }}</td>
+     
+            <td><a href="/emp/del/{{ e.pk }}/">DElete</a></td>
+            <td><a href="/emp/{{ e.pk }}/update">EDIT</a></td>
+        </tr>
+        {% endfor %}
+
+
+    </table>
+
+
+
+
+</body>
+
+</html>
