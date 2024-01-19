@@ -107,4 +107,7 @@ def mail(request):
         m="success"
     else:
         m='failed'
-    return HttpResponse(m)        
+    return HttpResponse(m)     
+
+def my_change(request):
+    return HttpResponse('my new changes')   
